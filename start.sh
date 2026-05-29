@@ -27,4 +27,4 @@ sleep 2
 
 PORT_TO_USE=${PORT:-10000}
 echo "Starting websockify on 0.0.0.0:$PORT_TO_USE -> 127.0.0.1:5900..."
-exec websockify --listen-host 0.0.0.0 --web /usr/share/novnc $PORT_TO_USE 127.0.0.1:5900
+exec websockify --web /usr/share/novnc 0.0.0.0:$PORT_TO_USE 127.0.0.1:5900
